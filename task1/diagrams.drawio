@@ -1,0 +1,295 @@
+<mxfile host="Electron" pages="7">
+  <diagram name="1. Запись к специалисту (As-Is)" id="D6wx5HQPNgsBXVexyAOD">
+    <mxGraphModel dx="1583" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Запись пациента к специалисту (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент&#xa;[внешняя сущность]" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Администратор&#xa;(ресепшен)" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="1.0 Оформление записи&#xa;и регистрация пациента" vertex="1">
+          <mxGeometry height="80" width="190" x="340" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D1: Journal-Doctor-FIO&#xa;(Excel, общий диск)" vertex="1">
+          <mxGeometry height="60" width="210" x="660" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D2: Patients&#xa;(Excel, общий диск)" vertex="1">
+          <mxGeometry height="60" width="210" x="660" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="ФИО, дата рожд., телефон,&#xa;e-mail (устно/лично)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="ввод данных вручную">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="запись к врачу">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n6" value="учётная запись&#xa;пациента">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="проверка слотов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• данные вводятся вручную&#xa;• Excel без шифрования&#xa;• доступ к диску у всех&#xa;• нет аудита действий" vertex="1">
+          <mxGeometry height="90" width="230" x="340" y="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Учёт пациента и файлов (As-Is)" id="NjP4-qjwRknKZ1MomobG">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Регистрация пациента и файлов (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Администратор&#xa;(ресепшен)" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="2.0 Регистрация файлов&#xa;пациента" vertex="1">
+          <mxGeometry height="80" width="190" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D2: Patients (Excel)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D3: Pacient-FIO-BD&#xa;(папка: JPG/PDF/Excel)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="скан-копии, формы,&#xa;расширенные ПДн">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="ФИО, дата рожд.,&#xa;контакты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="файлы пациента&#xa;(разные форматы)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• спец.категория ПДн вне систем&#xa;• файлы в открытом виде&#xa;• дублирование папок&#xa;• нет реестра и владельца данных" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Приём и ведение медкарты (As-Is)" id="lAYPrDmuyxctfCnSMY2o">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Приём специалиста и ведение медкарты (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Специалист-медик&#xa;(Doctor)" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="3.0 Ведение журнала&#xa;и медкарты" vertex="1">
+          <mxGeometry height="80" width="190" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D1: Journal-Doctor-FIO&#xa;(Excel)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D3: Data file&#xa;(диагнозы, заключения)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="результаты приёма,&#xa;диагноз">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="отметка о приёме">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="заключение (PDF/скан)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="просмотр истории">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• медданные (спец.категория) в файлах&#xa;• нет разграничения доступа&#xa;• нет шифрования&#xa;• нет аудита чтения" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. Лаборатория анализов (As-Is)" id="ZERw2BXE6HrwhUaEQEnF">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Обработка анализов лабораторией (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Laboratory&#xa;(мед. лаборатория)" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="4.0 Регистрация&#xa;результатов анализов" vertex="1">
+          <mxGeometry height="80" width="190" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D4: Laboratory Registry&#xa;(RegistryByDate, Excel)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Специалист-медик" vertex="1">
+          <mxGeometry height="60" width="170" x="320" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="результаты анализов&#xa;(ФИО + мед. данные)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="реестр анализов за день">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="выдача результатов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• нет API, обмен файлами&#xa;• нет разделения по пациентам&#xa;• риск горизонтального доступа&#xa;• передача без шифрования" vertex="1">
+          <mxGeometry height="90" width="230" x="40" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="5. Оплата услуг (As-Is)" id="VDfr2YovMYkxT92M8PLy">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Приём и процессинг оплаты (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Кассир" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Бухгалтер" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="5.0 Приём оплаты&#xa;(двойной учёт)" vertex="1">
+          <mxGeometry height="80" width="190" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D5: ККМ (фискальные&#xa;данные)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D6: Excel кассы" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D7: 1С:Бухгалтерия" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="оплата за услуги">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="сумма, услуга, ФИО">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n6" value="фискальный чек">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n7" value="запись в Excel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="n6" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n8" value="данные о ДС&#xa;[TCP/IP, OLE]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n8" value="процессинг платежей">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• двойной ручной учёт (Excel+1С)&#xa;• риск расхождений/целостности&#xa;• OLE/TCP без шифрования&#xa;• ПДн+финансы вместе" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="6. Учёт ТМЦ (As-Is)" id="NYqXPrq3V8bUram3wW-t">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD: Учёт ТМЦ и закупок (As-Is)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Сотрудник склада&#xa;(Warehouse keeper)" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="6.0 Учёт ТМЦ&#xa;и закупок" vertex="1">
+          <mxGeometry height="80" width="190" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D8: 1С:Торговля и склад" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="D7: 1С:Бухгалтерия" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n3" value="приход/расход ТМЦ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n4" value="учёт ТМЦ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#333333;rounded=0;" target="n5" value="данные для бухучёта&#xa;[OLE]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Проблемы As-Is:&#xa;• файловый режим 1С (SPOF)&#xa;• нет резервирования&#xa;• обмен OLE без контроля" vertex="1">
+          <mxGeometry height="90" width="230" x="320" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="7. Меры защиты (To-Be, наложение)" id="y14SXD09fsE_Scz9G3Wh">
+    <mxGraphModel dx="1583" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" value="DFD с мерами защиты: поток данных пациента (To-Be)" vertex="1">
+          <mxGeometry height="40" width="760" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Пациент /&#xa;Сотрудник" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="Портал / API Gateway&#xa;(TLS, MFA, RBAC/ABAC)" vertex="1">
+          <mxGeometry height="80" width="190" x="300" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="Доменные сервисы&#xa;(мин. привилегии)" vertex="1">
+          <mxGeometry height="80" width="190" x="300" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=30;fontSize=12;" value="Классификация&#xa;и тегирование данных" vertex="1">
+          <mxGeometry height="80" width="190" x="300" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="Хранилище (PostgreSQL/S3)&#xa;шифрование at rest (AES-256)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="Data Lake&#xa;(обезличенные данные)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=center;" value="Аудит/SIEM&#xa;(логи доступа)" vertex="1">
+          <mxGeometry height="60" width="210" x="640" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n2" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n3" value="TLS 1.2+">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="n3" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n4" value="проверка ролей/атрибутов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n5" value="тегирование&#xa;(class/category)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n6" value="шифрование + теги">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="n5" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n7" value="обезличивание">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="n4" style="endArrow=block;html=1;fontSize=10;strokeColor=#b85450;rounded=0;dashed=1;" target="n8" value="журналирование&#xa;доступа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=10;align=left;" value="Меры на этапах потока:&#xa;• Сбор: минимизация, согласие&#xa;• Передача: TLS/mTLS, API GW&#xa;• Хранение: шифрование, KMS/Vault&#xa;• Доступ: RBAC/ABAC, MFA&#xa;• Аналитика: обезличивание, Data Lake&#xa;• Контроль: DLP, аудит, SIEM, алертинг" vertex="1">
+          <mxGeometry height="150" width="240" x="40" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
