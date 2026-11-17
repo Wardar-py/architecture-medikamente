@@ -1,0 +1,112 @@
+<mxfile host="Electron">
+  <diagram id="cxDhTenowBHAKbAWoqSR" name="C2 Classification Engine">
+    <mxGraphModel dx="2483" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#736782;fontSize=11;" value="Источники данных&#xa;[OLTP, Excel, S3, 1С]&#xa;неразмеченные,&#xa;изменяемые структуры" vertex="1">
+          <mxGeometry height="110" width="200" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#736782;fontSize=11;" value="Каталог данных&#xa;(OpenMetadata/Atlas)&#xa;глоссарий, теги, Lineage" vertex="1">
+          <mxGeometry height="100" width="200" x="-170" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#736782;fontSize=11;" value="Data Steward / DPO&#xa;разбор sporn-очереди" vertex="1">
+          <mxGeometry height="90" width="200" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-5" parent="1" style="rounded=1;fontSize=13;fontStyle=1;whiteSpace=wrap;html=1;dashed=1;arcSize=3;fillColor=none;strokeColor=#666666;fontColor=#333333;align=left;verticalAlign=top;dashPattern=8 4;spacingLeft=8;spacingTop=6;" value="Классификация данных перед загрузкой в хранилище" vertex="1">
+          <mxGeometry height="830" width="1010" x="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Ingestion Service&#xa;[container]&#xa;приём batch/stream,&#xa;профилирование схемы" vertex="1">
+          <mxGeometry height="90" width="200" x="500" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Schema Detector&#xa;[container]&#xa;обнаружение дрейфа&#xa;структур" vertex="1">
+          <mxGeometry height="90" width="200" x="1010" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Rule/Regex Classifier&#xa;[container]&#xa;паттерны ПДн&#xa;(телефон, СНИЛС, e-mail)" vertex="1">
+          <mxGeometry height="90" width="200" x="660" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="ML/NER Classifier&#xa;[container]&#xa;модель классификации&#xa;текста и полей" vertex="1">
+          <mxGeometry height="90" width="200" x="1010" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Tagging &amp; Policy Engine&#xa;[container]&#xa;присвоение тегов&#xa;class/category/PII" vertex="1">
+          <mxGeometry height="90" width="200" x="400" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Data Router / Masking&#xa;[container]&#xa;маршрутизация по слоям,&#xa;обезличивание" vertex="1">
+          <mxGeometry height="90" width="200" x="1020" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Review Queue&#xa;[container]&#xa;низкая уверенность →&#xa;ручной разбор" vertex="1">
+          <mxGeometry height="90" width="200" x="520" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=8;strokeColor=#0E7DAD;fontSize=11;" value="Metrics/Quality Monitor&#xa;[container]&#xa;precision/recall,&#xa;коверидж" vertex="1">
+          <mxGeometry height="90" width="200" x="820" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-14" parent="1" style="rounded=1;fontSize=13;fontStyle=1;whiteSpace=wrap;html=1;dashed=1;arcSize=3;fillColor=none;strokeColor=#666666;fontColor=#333333;align=left;verticalAlign=top;dashPattern=8 4;spacingLeft=8;spacingTop=6;" value="Аналитическое хранилище (Data Lake / DWH)" vertex="1">
+          <mxGeometry height="520" width="830" x="1540" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-15" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=11;" value="Raw Zone&#xa;(изолированная,&#xa;шифрование)" vertex="1">
+          <mxGeometry height="80" width="200" x="1840" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-16" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=11;" value="Quarantine Zone&#xa;(неклассиф. /&#xa;подозрительные)" vertex="1">
+          <mxGeometry height="80" width="200" x="2110" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-17" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=11;" value="Clean Zone&#xa;(классиф. +&#xa;обезличенные)" vertex="1">
+          <mxGeometry height="80" width="200" x="1570" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-18" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#1061B0;fontColor=#ffffff;strokeColor=#0D5091;fontSize=11;" value="Sensitive Zone&#xa;(шифр., строгий&#xa;доступ по тегам)" vertex="1">
+          <mxGeometry height="80" width="200" x="2020" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-19" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-2" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-6" value="batch/stream">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-20" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-6" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-7" value="схема">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-21" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-7" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-8" value="поля">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-22" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-7" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-9" value="поля/текст">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-23" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-8" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-10" value="правила →">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-24" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-9" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-10" value="предсказания →">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-25" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-10" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-11" value="теги">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-26" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-10" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-12" value="низкая&#xa;уверенность">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-27" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-12" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-4" value="на разбор">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-28" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-4" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-10" value="ручная&#xa;разметка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-29" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-10" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-3" value="публикация&#xa;тегов/Lineage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-30" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-11" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-15" value="сырое">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-31" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-11" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-16" value="неклассиф.">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-32" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-11" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-17" value="обезличенное">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-33" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-11" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-18" value="конфиденц.&#xa;(шифр.)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-34" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-10" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-13" value="события">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GgLUQ-4A9tSn4lP1Gbwf-35" edge="1" parent="1" source="GgLUQ-4A9tSn4lP1Gbwf-13" style="endArrow=block;html=1;fontSize=10;strokeColor=#404040;rounded=1;edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;" target="GgLUQ-4A9tSn4lP1Gbwf-3" value="метрики&#xa;качества">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
